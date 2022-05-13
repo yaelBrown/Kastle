@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  kastle_db:
+    container_name: kastle_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    image: mysql:latest
