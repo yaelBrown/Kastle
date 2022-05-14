@@ -4,6 +4,6 @@ const History = () => {
       <h2>Game History Page</h2>
     </div>
   );
-}
+};
 
 export default History;

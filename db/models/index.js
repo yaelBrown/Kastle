@@ -1,7 +1,7 @@
-const Users = require('./UsersModel')
-const Organizations = require('./OrganizationsModel')
+const Users = require("./UsersModel");
+const Organizations = require("./OrganizationsModel");
 
 module.exports = {
   Users,
-  Organizations
-}
+  Organizations,
+};

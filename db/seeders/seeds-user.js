@@ -1,4 +1,4 @@
-const { Users } = require('../models')
+const { Users } = require("../models");
 
 const UsersData = [
   {
@@ -36,9 +36,9 @@ const UsersData = [
     email: "demouser3@mailinator.com",
     organization_id: 0,
     isOrgAdmin: false,
-  }
-]
+  },
+];
 
-const seedUsers = () => Users.bulkCreate(UsersData)
+const seedUsers = () => Users.bulkCreate(UsersData);
 
-module.exports = seedUsers
+module.exports = seedUsers;

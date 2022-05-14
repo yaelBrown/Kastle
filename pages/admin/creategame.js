@@ -4,6 +4,6 @@ const CreateGame = () => {
       <h2>Create Game</h2>
     </div>
   );
-}
+};
 
 export default CreateGame;

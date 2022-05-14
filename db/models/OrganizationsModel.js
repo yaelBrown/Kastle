@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Organizations extends Model {}
 
@@ -14,7 +14,7 @@ Organizations.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     platform: {
       type: DataTypes.STRING,
@@ -23,21 +23,21 @@ Organizations.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
-    }
+      unique: true,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'organizations',
+    modelName: "organizations",
   }
-)
+);
 
-module.exports = Organizations
+module.exports = Organizations;

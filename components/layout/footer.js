@@ -1,4 +1,4 @@
-import styles from '../../styles/Home.module.css'
+import styles from "../../styles/Home.module.css";
 
 const Footer = () => {
   return (
@@ -6,6 +6,6 @@ const Footer = () => {
       <h2>Footer</h2>
     </footer>
   );
-}
+};
 
 export default Footer;

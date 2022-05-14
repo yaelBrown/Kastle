@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Users extends Model {}
 
@@ -17,30 +17,30 @@ Users.init(
     },
     lname: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
     alias: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     organization_id: {
       type: DataTypes.BIGINT,
-      allowNull: true
+      allowNull: true,
     },
     isOrgAdmin: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-      defaultValue: false
+      defaultValue: false,
     },
   },
   {
@@ -48,8 +48,8 @@ Users.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'users',
+    modelName: "users",
   }
-)
+);
 
-module.exports = Users
+module.exports = Users;

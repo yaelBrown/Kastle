@@ -4,6 +4,6 @@ const Test = () => {
       <h2>Test</h2>
     </div>
   );
-}
+};
 
 export default Test;
