@@ -61,14 +61,14 @@ export default async function handler(req, res) {
       if (body.id === undefined || isNaN(body.id)) throw "Id was not passed in request"
 
       const userData = await UsersModel.destroy({
-        where: { id: req.params.id }
+        where: { id: body.id }
       })
 
       const out = { ...userData.dataValues }
       delete out.password
 
       res.status(200).json({
-        msg: "UPDATED",
+        msg: "DELETED",
         data: out
       })
     } catch (error) {

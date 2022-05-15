@@ -35,8 +35,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/user/12",
+							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
 							"protocol": "http",
 							"host": [
 								"{{kastle_db_host}}"
@@ -45,8 +54,7 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
-								"12"
+								"users"
 							]
 						}
 					},
