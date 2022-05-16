@@ -1,6 +1,10 @@
 import UsersModel from '../../../../db/models/UsersModel'
 import bcrypt from 'bcryptjs/dist/bcrypt'
 
+const Authentication = require('../../../../util/authentication/Authentication')
+
+const auth = new Authentication()
+
 const handler = async (req, res) => {
 
   // Login user
@@ -40,10 +44,9 @@ const handler = async (req, res) => {
       if (await bcrypt.compare(body.password, out.password)) {
         out = { ...out }
         delete out.password
-
-        res.status(200).json({
+        res.status(200).json({  // BUG: throws http headers sent error
           msg: "OK",
-          data: out
+          data: await auth.createToken(out)
         })
       } 
       

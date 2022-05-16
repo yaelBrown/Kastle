@@ -1,40 +1,52 @@
 const jwt = require('jsonwebtoken')
 
-const tempSecret = 'eWFlbCBicm93bi1ldmFucw=='
-
 class Authentication {
   constructor() {
     this.secret = process.env.JWT_KEY ? process.env.JWT_KEY : 'eWFlbCBicm93bi1ldmFucw=='
+    this.days = 7 // time in days before token to expire
   }
 
-  createToken = (user) => {
-    const days = 7 // time in days before token to expire
+  createToken = async (user) => {
     if (user.password !== undefined) delete user.password
     const tokenData = {
       data: user,
-      exp: Math.floor(Date.now() / 1000) + ((60 * 60) * days)
+      exp: Math.floor(Date.now() / 1000) + ((60 * 60) * this.days)
     }
-    return jwt.sign(tokenData, this.secret)
+    return await jwt.sign(tokenData, this.secret)
   }
 
-  isValid = token => {
+  isValid = async token => {
     if (token === undefined) return false
-    const tkn = this.verify(token)
+    const tkn = await this.verify(token)
     if (tkn === undefined) return false
     return tkn.exp > Math.floor(Date.now() / 1000)
   }
 
-  verify = token => {
+  verify = async token => {
     if (token === undefined) return false
     try {
-      return jwt.verify(token, this.secret)
+      return await jwt.verify(token, this.secret)
     } catch (error) {
       console.error(error)
       return undefined
     }
   }
 
+  saveToLocalStorage = token => {
+    localStorage.setItem('tkn', token)
+  }
+
+  verifyFromLocalStorage = () => {
+    const token = localStorage.getItem('tkn')
+    if (token === undefined) {
+      return False
+    } else {
+      return this.isValid(token)
+    }
+  }
 }
+
+module.exports = Authentication
 
 /* Quick test this auth util */
 

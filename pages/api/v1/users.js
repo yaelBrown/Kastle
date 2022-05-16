@@ -1,6 +1,8 @@
 import UsersModel from '../../../db/models/UsersModel'
 import bcrypt from 'bcryptjs/dist/bcrypt'
+// import Authentication from '../../../util/authentication/Authentication'
 
+// const auth = Authentication()
 
 export default async function handler(req, res) {
 
