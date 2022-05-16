@@ -15,17 +15,12 @@ class Authentication {
     return await jwt.sign(tokenData, this.secret)
   }
 
-  isValid = async token => {
-    if (token === undefined) return false
-    const tkn = await this.verify(token)
-    if (tkn === undefined) return false
-    return tkn.exp > Math.floor(Date.now() / 1000)
-  }
+  isValid = token => token.exp > Math.floor(Date.now() / 1000)
 
   verify = async token => {
     if (token === undefined) return false
     try {
-      return await jwt.verify(token, this.secret)
+      return jwt.verify(token, this.secret)
     } catch (error) {
       console.error(error)
       return undefined
@@ -41,9 +36,12 @@ class Authentication {
     if (token === undefined) {
       return False
     } else {
-      return this.isValid(token)
+      const out = this.isValid(token)
+      return out
     }
   }
+
+  
 }
 
 module.exports = Authentication

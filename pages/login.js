@@ -24,7 +24,7 @@ const Login = () => {
   const changeHandler = e => setForm({ ...form, [e.target.name]: e.target.value })
 
   const loginHandler = async () => {
-    setState({ ...state, loading: true })
+    setState({ ...state, loading: true, error: false })
     const loginResponse = await axios.post('http://localhost:3000/api/v1/user/login', form).then(res => res.data).then(data => data)
     if (loginResponse.msg === "OK") {
       auth.saveToLocalStorage(loginResponse.data)
@@ -62,7 +62,7 @@ const Login = () => {
           </tr>
           <tr>
             <td>
-              <button>Register</button>
+              <button onClick={() => router.push("/register")}>Register</button>
               <button onClick={() => loginHandler()}>Login</button>
             </td>
           </tr>
