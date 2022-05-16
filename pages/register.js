@@ -1,53 +1,57 @@
 import { useState } from "react";
-import { useRouter } from 'next/router'
-import axios from 'axios'
-import Loading from '../components/Loading'
+import { useRouter } from "next/router";
+import axios from "axios";
+import Loading from "../components/Loading";
 
 const Register = () => {
-  const router = useRouter()
+  const router = useRouter();
   const initialForm = {
     alias: "",
     email: "",
     fname: "",
     lname: "",
-    password: ""
-  }
+    password: "",
+  };
   const initialState = {
     loading: false,
     error: "",
-    msg: false
-  }
+    msg: false,
+  };
 
-  const [form, setForm] = useState(initialForm)
-  const [state, setState] = useState(initialState)
+  const [form, setForm] = useState(initialForm);
+  const [state, setState] = useState(initialState);
 
-  const changeHandler = e => setForm({ ...form, [e.target.name]: e.target.value })
+  const changeHandler = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const registerHandler = async () => {
-    setState({ ...state, loading: true, error: "", msg: false })
-    const registerResponse = await axios.post('http://localhost:3000/api/v1/users', form).then(res => res.data).then(data => data)
+    setState({ ...state, loading: true, error: "", msg: false });
+    const registerResponse = await axios
+      .post("http://localhost:3000/api/v1/users", form)
+      .then((res) => res.data)
+      .then((data) => data);
     if (registerResponse.msg === "CREATED") {
-      setState({ ...state, loading: false, msg: "User Created Successfully" })
+      setState({ ...state, loading: false, msg: "User Created Successfully" });
       const timer = setTimeout(() => {
-        router.push('/login')
+        router.push("/login");
       }, 2500);
       return () => clearTimeout(timer);
     } else {
-      setState({ ...state, loading: false, error: "Error creating user" })
+      setState({ ...state, loading: false, error: "Error creating user" });
     }
-  }
+  };
 
   const displayMessage = () => {
     if (state.msg) {
-      return (<small>{state.msg}</small>)
+      return <small>{state.msg}</small>;
     }
-  }
+  };
 
   const displayError = () => {
     if (state.error) {
-      return (<small>{state.error}</small>)
+      return <small>{state.error}</small>;
     }
-  }
+  };
 
   return (
     <section>
@@ -61,7 +65,7 @@ const Register = () => {
             <input
               name="alias"
               value={form.alias}
-              onChange={e => changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
             />
           </td>
         </tr>
@@ -74,7 +78,7 @@ const Register = () => {
             <input
               name="email"
               value={form.email}
-              onChange={e => changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
             />
           </td>
         </tr>
@@ -88,7 +92,7 @@ const Register = () => {
               name="password"
               value={form.password}
               type="password"
-              onChange={e => changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
             />
           </td>
         </tr>
@@ -101,7 +105,7 @@ const Register = () => {
             <input
               name="fname"
               value={form.fname}
-              onChange={e => changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
             />
           </td>
         </tr>
@@ -114,11 +118,10 @@ const Register = () => {
             <input
               name="lname"
               value={form.lname}
-              onChange={e => changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
             />
           </td>
         </tr>
-
       </table>
 
       <table>
@@ -131,7 +134,6 @@ const Register = () => {
 
       {displayMessage()}
       {displayError()}
-
     </section>
   );
 };

@@ -1,198 +1,159 @@
 {
-	"info": {
-		"_postman_id": "21a24420-2f1c-41b1-af48-aa3ca61b17e5",
-		"name": "Kastle",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Users",
-			"item": [
-				{
-					"name": "GET User",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/user/12",
-							"protocol": "http",
-							"host": [
-								"{{kastle_db_host}}"
-							],
-							"port": "{{kastle_db_port}}",
-							"path": [
-								"api",
-								"v1",
-								"user",
-								"12"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE User",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 12\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
-							"protocol": "http",
-							"host": [
-								"{{kastle_db_host}}"
-							],
-							"port": "{{kastle_db_port}}",
-							"path": [
-								"api",
-								"v1",
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login User",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"adminuser@mailinator.com\",\r\n    \"password\": \"password\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/user/login",
-							"protocol": "http",
-							"host": [
-								"{{kastle_db_host}}"
-							],
-							"port": "{{kastle_db_port}}",
-							"path": [
-								"api",
-								"v1",
-								"user",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "CREATE User",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fname\": \"Hak\",\r\n    \"lname\": \"Ker\",\r\n    \"alias\": \"Hacker0x01\",\r\n    \"password\": \"password\",\r\n    \"email\": \"hacker@hackerone.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
-							"protocol": "http",
-							"host": [
-								"{{kastle_db_host}}"
-							],
-							"port": "{{kastle_db_port}}",
-							"path": [
-								"api",
-								"v1",
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UPDATE User",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"apples\",\r\n    \"fname\": \"Hak\",\r\n    \"lname\": \"Ker\",\r\n    \"alias\": \"Hacker0x01\",\r\n    \"password\": \"password\",\r\n    \"email\": \"hacker@hackerone.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
-							"protocol": "http",
-							"host": [
-								"{{kastle_db_host}}"
-							],
-							"port": "{{kastle_db_port}}",
-							"path": [
-								"api",
-								"v1",
-								"users"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Organizations",
-			"item": []
-		},
-		{
-			"name": "Test",
-			"item": [
-				{
-					"name": "GET Test",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/test/",
-							"protocol": "http",
-							"host": [
-								"{{kastle_db_host}}"
-							],
-							"port": "{{kastle_db_port}}",
-							"path": [
-								"api",
-								"v1",
-								"test",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	],
-	"variable": [
-		{
-			"key": "kastle_db_host",
-			"value": "localhost"
-		},
-		{
-			"key": "kastle_db_port",
-			"value": "3000"
-		}
-	]
+  "info": {
+    "_postman_id": "21a24420-2f1c-41b1-af48-aa3ca61b17e5",
+    "name": "Kastle",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "GET User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/user/12",
+              "protocol": "http",
+              "host": ["{{kastle_db_host}}"],
+              "port": "{{kastle_db_port}}",
+              "path": ["api", "v1", "user", "12"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 12\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
+              "protocol": "http",
+              "host": ["{{kastle_db_host}}"],
+              "port": "{{kastle_db_port}}",
+              "path": ["api", "v1", "users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"adminuser@mailinator.com\",\r\n    \"password\": \"password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/user/login",
+              "protocol": "http",
+              "host": ["{{kastle_db_host}}"],
+              "port": "{{kastle_db_port}}",
+              "path": ["api", "v1", "user", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fname\": \"Hak\",\r\n    \"lname\": \"Ker\",\r\n    \"alias\": \"Hacker0x01\",\r\n    \"password\": \"password\",\r\n    \"email\": \"hacker@hackerone.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
+              "protocol": "http",
+              "host": ["{{kastle_db_host}}"],
+              "port": "{{kastle_db_port}}",
+              "path": ["api", "v1", "users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE User",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": \"apples\",\r\n    \"fname\": \"Hak\",\r\n    \"lname\": \"Ker\",\r\n    \"alias\": \"Hacker0x01\",\r\n    \"password\": \"password\",\r\n    \"email\": \"hacker@hackerone.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/users",
+              "protocol": "http",
+              "host": ["{{kastle_db_host}}"],
+              "port": "{{kastle_db_port}}",
+              "path": ["api", "v1", "users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Organizations",
+      "item": []
+    },
+    {
+      "name": "Test",
+      "item": [
+        {
+          "name": "GET Test",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{kastle_db_host}}:{{kastle_db_port}}/api/v1/test/",
+              "protocol": "http",
+              "host": ["{{kastle_db_host}}"],
+              "port": "{{kastle_db_port}}",
+              "path": ["api", "v1", "test", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "kastle_db_host",
+      "value": "localhost"
+    },
+    {
+      "key": "kastle_db_port",
+      "value": "3000"
+    }
+  ]
 }

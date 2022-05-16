@@ -1,14 +1,13 @@
-import nextSession from 'next-session'
+import nextSession from "next-session";
 
-const getSession = nextSession()
+const getSession = nextSession();
 
 class Session {
   constructor() {
-    this.something = "something"
+    this.something = "something";
   }
 
-  // Don't need to do this if you are using JWT. 
-  
+  // Don't need to do this if you are using JWT.
 }
 
-module.exports = Session
+module.exports = Session;

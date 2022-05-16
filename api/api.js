@@ -1,14 +1,14 @@
 // import axios from 'axios'
 
-const axios = require('axios')
-const CONST = '../util/constants.js'
+const axios = require("axios");
+const CONST = "../util/constants.js";
 
 class Api {
   constructor(path) {
     // this.api_url = CONST.API_URL
     // this.url = `${this.api_url}/${CONST.API_VERSION}/${path}`
 
-    this.url = `http://localhost:3000/api/v1/${path}`
+    this.url = `http://localhost:3000/api/v1/${path}`;
   }
 
   makeRequest = async (payload, method) => {
@@ -17,28 +17,27 @@ class Api {
       method,
       data: JSON.stringify(payload),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        "Content-Type": "application/json",
+      },
     })
-      .then(res => res.data)
-      .then(data => {return data})
-      .catch(err => console.error(err))
-  }
+      .then((res) => res.data)
+      .then((data) => {
+        return data;
+      })
+      .catch((err) => console.error(err));
+  };
 }
 
-module.exports = Api
-
-
+module.exports = Api;
 
 // test this util
 
-const aa = { "username": "AdminUser", "password": "password" }
+const aa = { username: "AdminUser", password: "password" };
 
-const api = new Api("user/login")
+const api = new Api("user/login");
 
-const response = api.makeRequest(aa, "POST")
+const response = api.makeRequest(aa, "POST");
 // axios.post("http://localhost:3000/api/v1/user/login", aa).then(res => res.data).then(data => console.log(data))
 
-
-console.log(api.url)
-console.log(response)
+console.log(api.url);
+console.log(response);
