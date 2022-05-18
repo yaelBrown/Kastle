@@ -29,7 +29,7 @@ const Dashboard = () => {
     } catch (error) {
       router.push("/login");
     }
-  }, [1]);
+  }, []);
 
   const [state, setState] = useState(initialState);
 
