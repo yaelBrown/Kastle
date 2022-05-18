@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import Loading from "../components/Loading";
+// import Loading from "../components/Loading";
 import Authentication from "../util/authentication/Authentication";
 
 const auth = new Authentication();
@@ -78,7 +78,7 @@ const Login = () => {
       </table>
       <br />
       {state.error ? <small>{state.error}</small> : ""}
-      {state.loading ? <Loading /> : ""}
+      {/* {state.loading ? <Loading /> : ""} */}
     </section>
   );
 };
