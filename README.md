@@ -2,4 +2,4 @@
 
 spinoff cyber sec application
 
-<img src="./assets/images/Kastle-Logo.jpg">
+<img src="./public/images/Kastle-Logo.jpg">
