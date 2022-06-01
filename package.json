@@ -7,11 +7,16 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "node db/seeders/index.js",
-    "migrate": "sequelize-cli db:migrate"
+    "migrate": "sequelize-cli db:migrate",
+    "cy:info": "cypress info",
+    "cy:verify": "cypress verify",
+    "test:headless": "cypress run",
+    "test": "cypress open"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
+    "cypress": "^9.7.0",
     "dotenv": "^16.0.1",
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^8.5.1",
