@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Home",
+    "url": "/" 
+  },
+  {
+    "name": "Profile",
+    "url": "/profile" 
+  },
+  {
+    "name": "Chat",
+    "url": "/chat" 
+  },
+  {
+    "name": "Games",
+    "url": "/games" 
+  },
+  {
+    "name": "Admin",
+    "url": "/admin" 
+  },
+  {
+    "name": "News",
+    "url": "/news"
+  }
+]
