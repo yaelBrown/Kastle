@@ -1,23 +1,23 @@
 [
   {
     "name": "Home",
-    "url": "/" 
+    "url": "/"
   },
   {
     "name": "Profile",
-    "url": "/profile" 
+    "url": "/profile"
   },
   {
     "name": "Chat",
-    "url": "/chat" 
+    "url": "/chat"
   },
   {
     "name": "Games",
-    "url": "/games" 
+    "url": "/games"
   },
   {
     "name": "Admin",
-    "url": "/admin" 
+    "url": "/admin"
   },
   {
     "name": "News",

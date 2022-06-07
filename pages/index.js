@@ -15,7 +15,7 @@ export default function Home() {
       </video> */}
 
       <main className={styles.main}>
-        <LandingOne/>
+        <LandingOne />
       </main>
 
       {/* <Footer /> */}

@@ -83,4 +83,6 @@ const Login = () => {
   );
 };
 
+Login.Layout = "L1";
+
 export default Login;

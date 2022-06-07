@@ -1,21 +1,13 @@
-import ni from './NavbarItems.json'
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../../assets/styles/components/dashboard/Navbar.module.css";
 
 function Navbar() {
-
-  const renderItems = () => {
-    let out = []
-    ni.forEach(e => {
-      let t = <li><a href={e.url}>{e.name}</a></li>
-      out.append(t)
-    })
-    return out
-  }
-  
   return (
-    <div>
-      Navbar
-      {renderItems()}
-    </div>
+    <nav>
+      <div>x</div>
+      <div>y</div>
+    </nav>
   );
 }
 

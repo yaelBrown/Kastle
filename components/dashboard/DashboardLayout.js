@@ -6,15 +6,13 @@ import Sidebar from "./Sidebar";
 const DashboardLayout = ({ children }) => {
   return (
     <>
-      <Header/>
-      <Navbar/>
-      <Sidebar/>
-      <main>
-        {children}
-      </main>
-      <Footer/>
+      <Header />
+      <Navbar />
+      <Sidebar />
+      <main>{children}</main>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
 export default DashboardLayout;

@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.navLink {
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #257a26;
+  transition: color 0.1s;
+}

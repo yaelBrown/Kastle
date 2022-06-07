@@ -5,12 +5,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-        <main>
-          {props.children}
-        </main>
+      <main>{children}</main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default Layout;
