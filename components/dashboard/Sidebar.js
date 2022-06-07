@@ -1,11 +1,12 @@
 import ni from "./NavbarItems.json";
+import styles from "../../assets/styles/components/dashboard/Sidebar.module.css";
 
 function Sidebar() {
   const renderItems = () => {
     let out = [];
     ni.forEach((e) => {
       let t = (
-        <li>
+        <li className={styles.sideLi}>
           <a href={e.url}>{e.name}</a>
         </li>
       );
@@ -15,9 +16,8 @@ function Sidebar() {
   };
 
   return (
-    <div>
-      Navbar
-      {renderItems()}
+    <div className={styles.sidebar}>
+      <ul className={styles.sideUl}>{renderItems()}</ul>
     </div>
   );
 }

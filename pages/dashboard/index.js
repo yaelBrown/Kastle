@@ -5,6 +5,7 @@ import Authentication from "../../util/authentication/Authentication";
 import jwt from "jsonwebtoken";
 import { JWT_TOKEN } from "../../util/constants";
 import Navbar from "../../components/dashboard/Navbar";
+import Sidebar from "../../components/dashboard/Sidebar";
 
 const auth = new Authentication();
 
@@ -46,6 +47,7 @@ const Dashboard = () => {
   return (
     <section>
       <Navbar />
+      <Sidebar />
     </section>
   );
 };

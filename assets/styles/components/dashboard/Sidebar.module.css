@@ -1,0 +1,19 @@
+.sidebar {
+  position: relative;
+  float: left;
+  top: 55px;
+  background-color: #121212;
+  height: 100%;
+}
+
+.sideUl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sideLi {
+  margin: 0.5 rem 0;
+  padding: 0;
+  list-style: none;
+}

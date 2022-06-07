@@ -1,4 +1,4 @@
-const CreateGame = () => {
+const GameCreate = () => {
   return (
     <div>
       <h2>Create Game</h2>
@@ -6,4 +6,4 @@ const CreateGame = () => {
   );
 };
 
-export default CreateGame;
+export default GameCreate;

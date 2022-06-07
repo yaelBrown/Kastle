@@ -5,6 +5,10 @@
   align-items: center;
   width: 100%;
   margin-top: 0.5rem;
+  background-color: #121212;
+  top: 0;
+  position: absolute;
+  height: 50px;
 }
 
 .navLink {

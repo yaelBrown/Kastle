@@ -1,7 +1,7 @@
 [
   {
     "name": "Home",
-    "url": "/"
+    "url": "/dashboard"
   },
   {
     "name": "Profile",
@@ -13,11 +13,11 @@
   },
   {
     "name": "Games",
-    "url": "/games"
+    "url": "/games/"
   },
   {
     "name": "Admin",
-    "url": "/admin"
+    "url": "/admin/"
   },
   {
     "name": "News",
