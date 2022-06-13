@@ -11,7 +11,7 @@ const Logout = () => {
       router.push("/");
     }, 5000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [2]);
 
   return (
     <section>

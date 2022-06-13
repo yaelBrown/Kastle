@@ -1,4 +1,4 @@
-const ViewGames = () => {
+const GamesView = () => {
   return (
     <div>
       <h2>View a list of active games</h2>
@@ -6,4 +6,4 @@ const ViewGames = () => {
   );
 };
 
-export default ViewGames;
+export default GamesView;
