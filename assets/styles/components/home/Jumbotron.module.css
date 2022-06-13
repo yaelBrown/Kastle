@@ -1,0 +1,22 @@
+.bgImage {
+  z-index: 1;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: row;
+}
+
+.jumboLeft {
+  z-index: 10;
+  width: 50%;
+  margin: auto;
+}
+
+.jumboRight {
+  width: 50%;
+  margin: auto;
+}

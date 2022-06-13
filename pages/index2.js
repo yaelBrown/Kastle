@@ -3,8 +3,13 @@ import Link from "next/link";
 import Footer from "../components/layout/footer";
 import Header from "../components/layout/header";
 import Navbar from "../components/home/Navbar";
-import styles from "../assets/styles/Home.module.css";
-import Jumbotron from "../components/home/jumbotron";
+import Jumbotron from "../components/home/sections/jumbotron";
+import Whatis from "../components/home/sections/whatis";
+import Kastrate from "../components/home/sections/kastrate";
+import Platforms from "../components/home/sections/platforms";
+import Pay from "../components/home/sections/pay";
+
+import styles from "../assets/styles/Landing.module.css";
 
 const Home = () => {
   return (
@@ -12,7 +17,11 @@ const Home = () => {
       <Header />
       <Navbar />
       <Jumbotron />
-      <h1>Home Page</h1>
+      <Whatis />
+      <Kastrate />
+      <Platforms />
+      <Pay />
+      <p>Join Today</p>
       <Footer />
     </div>
   );
