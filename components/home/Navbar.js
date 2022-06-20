@@ -21,6 +21,7 @@ const Navbar = () => {
               auto
               color="gradient"
               ghost
+              css={{borderRadius: 0}}
             >Login</Button>
           </a>
         </Link>
@@ -38,9 +39,7 @@ const Navbar = () => {
           alt="kastleLogo"
         />
       </div>
-      <div>
-        
-      </div>
+      <div></div>
       <div>
         <h4>{renderNavAction()}</h4>
       </div>

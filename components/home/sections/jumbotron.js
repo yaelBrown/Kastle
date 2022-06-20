@@ -20,6 +20,7 @@ function Jumbotron() {
               color='success'
               ghost
               size='xl'
+              css={{borderRadius: 0}}
             >
               Join Today
             </Button>

@@ -2,6 +2,14 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 // import Loading from "../components/Loading";
+import { 
+  Container, 
+  // Row, 
+  // Col 
+} from '@nextui-org/react';
+
+
+import styles from "../assets/styles/Register.module.css"
 
 const Register = () => {
   const router = useRouter();
@@ -54,8 +62,11 @@ const Register = () => {
   };
 
   return (
+    // Change background and center content
+    // https://www.google.com/search?q=example+login+window&rlz=1C1CHBF_enUS974US974&sxsrf=ALiCzsaxqXusPXfc2nObJVgJhyx5D6wy2Q:1655687761965&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjboKTH7br4AhUEKkQIHaBpD9AQ_AUoAXoECAEQAw&biw=1338&bih=1384&dpr=1.31
     <section>
       <h2>Register</h2>
+      <Container>
       <table>
         <tr>
           <td>
@@ -134,6 +145,7 @@ const Register = () => {
 
       {displayMessage()}
       {displayError()}
+      </Container>
     </section>
   );
 };
